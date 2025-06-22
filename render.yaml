@@ -1,0 +1,7 @@
+version: 1
+services:
+  - type: web
+    name: my-laravel-app
+    env: php
+    buildCommand: "composer install --no-dev -o"
+    startCommand: "php -S 0.0.0.0:8000 -t public"
