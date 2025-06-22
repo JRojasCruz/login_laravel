@@ -1,0 +1,8 @@
+/vendor
+/node_modules
+.env
+.env.backup
+.git
+*.log
+Dockerfile
+*.md
