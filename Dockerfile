@@ -34,4 +34,4 @@ COPY docker/default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 
 # Iniciamos servicios al levantar el contenedor
-CMD service nginx start && php-fpm -F
+CMD nginx && php-fpm -F || exit 1
