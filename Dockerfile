@@ -30,6 +30,10 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY docker/default.conf /etc/nginx/conf.d/default.conf
 
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+CMD /start.sh
+
 # Exponemos el puerto 80 (el usado por Nginx)
 EXPOSE 80
 
